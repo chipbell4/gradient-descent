@@ -12,7 +12,7 @@ var vectorsClose = (expected, actual) => {
 
 var derivativeTest = (F, t, expected) => {
   var dF = derivative(F);
-  var actual = dF.get(t);
+  var actual = dF(t);
   vectorsClose(expected, actual);
 };
 
@@ -33,6 +33,8 @@ var approachTest = (F1, F2, expectedT1, expectedT2) => {
   closeTo(result.t2, expectedT2, 'For t2, expected ' + expectedT2 + ' got ' + result.t2);
 };
 var F1, F2;
+
+
 
 // two lines that intersect
 F1 = t => ({ x: t, y : 0 })
