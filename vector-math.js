@@ -10,7 +10,7 @@ module.exports.scale = function(P1, s) {
 
 // subtracts vectors
 module.exports.subtract = function(P1, P2) {
-  return add(P1, scale(P2, -1));
+  return this.add(P1, this.scale(P2, -1));
 };
 
 // dot product
