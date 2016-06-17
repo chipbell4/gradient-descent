@@ -1,7 +1,8 @@
 var V = require('./vector-math');
 
-module.exports = function(F, dt) {
-  dt = dt || 0.001;
+module.exports = function(F, options) {
+  options = options || {};
+  var dt = options.dt || 0.001;
 
   var dF = function(t) {
     var left2 = V.scale(F(t - 2 * dt), 1 / 12);
