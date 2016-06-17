@@ -1,7 +1,9 @@
 var assert = require('assert');
 var derivative = require('./derivative');
 
-var closeTo = (expected, actual) => assert(Math.abs(expected - actual) < 0.001);
+var closeTo = (expected, actual, message) => {
+  assert(Math.abs(expected - actual) < 0.001, message || 'expected ' + expected + ', got ' + actual);
+}
 var vectorsClose = (expected, actual) => {
   closeTo(expected.x, actual.x);
   closeTo(expected.y, actual.y);
