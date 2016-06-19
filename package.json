@@ -1,8 +1,8 @@
 {
-  "name": "bezier-approach",
+  "name": "gradient-descent",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gradient-descent.js",
   "scripts": {
     "test": "mocha"
   },
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bezier-js": "^2.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
